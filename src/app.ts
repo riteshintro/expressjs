@@ -1,10 +1,12 @@
 import express from 'express';
 import userRoutes from './api/routes/users';
+import adminRoutes from './api/routes/admin';
 
 const app = express();
 
 app.use(express.json());
-app.use('/users', userRoutes);
+app.use('/u-v2', userRoutes);
+app.use('/a-v2', adminRoutes);
 
 const PORT = process.env.PORT || 3000;
 
